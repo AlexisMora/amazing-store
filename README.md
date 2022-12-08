@@ -3,4 +3,4 @@ This project is aimed to be a test field for subjects i want to try in a real wo
 
 Based on: https://github.com/gndx/platzi-store
 
-Feel free to for and use it.
+Feel free to download and use it.
