@@ -1,10 +1,18 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 import Footer from '../../components/Footer';
 
 describe('Footer', () => {
+  let footerContainer;
+  beforeEach(() => {
+    const { container } = render(<Footer />);
+    footerContainer = container;
+  });
   test('renders Footer Component', () => {
-    const footer = render(<Footer />);
-    expect(footer).length > 0;
+    expect(footerContainer).toBeInTheDocument();
+  });
+  test('footer renders a title', () => {
+    const title = screen.getByText('Amazing Store');
+    expect(title).toBeInTheDocument();
   });
 });
